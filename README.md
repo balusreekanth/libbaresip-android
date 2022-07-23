@@ -1,7 +1,7 @@
-libbaresip-android
+libbaresip-android (Can be compiled on MAC and Linux )
 ==================
 
-This project shows how to build libbaresip for Android on Debian 11 using Android NDK. Resulting libbaresip can be used in Baresip based Android (Studio) applications.
+This project shows how to build libbaresip for Android on Debian 11 using Android NDK and Mac OSX . Resulting libbaresip can be used in Baresip based Android (Studio) applications.
 
 ## Step 0 - download Android NDK
 
@@ -22,6 +22,8 @@ This creates libbaresip-android directory containing Makefile.
 ## Step 2 - edit Makefile
 
 Go to ./libbaresip-android directory and edit Makefile. You need to set (or check) the variables listed in VALUES TO CONFIGURE section.
+
+You may need to edit and hardcode NDK path. Please check comments in Makefile.
 
 ## Step 3 - download source code
 
