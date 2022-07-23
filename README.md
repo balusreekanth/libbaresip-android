@@ -1,4 +1,4 @@
-libbaresip-android (Can be compiled on MAC and Linux )
+libbaresip-android (Can be compiled on Mac and Linux )
 ==================
 
 This project shows how to build libbaresip for Android on Debian 11 using Android NDK and Mac OSX . Resulting libbaresip can be used in Baresip based Android (Studio) applications.
