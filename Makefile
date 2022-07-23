@@ -1,7 +1,8 @@
 # -------------------- VALUES TO CONFIGURE --------------------
 
 # Path to Android NDK
-# NDK version must match ndkVersion in app/build.gradle
+# NDK version must match ndkVersion in app/build.gradle andhardcoding ndk_path will work. Check below.
+#NDK_PATH  := /Volumes/MAC/Users/developer/AndoirdSDK/ndk/23.1.7779620/
 NDK_PATH  := /opt/Android/ndk/$(shell sed -n '/ndkVersion/p' /usr/src/baresip-studio/app/build.gradle | sed 's/[^0-9.]*//g')
 
 # Android API level
