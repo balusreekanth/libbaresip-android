@@ -49,6 +49,7 @@ ifeq ($(OS),linux)
 endif
 ifeq ($(OS),darwin)
 	HOST_OS   := darwin-x86_64
+	ln -s $(which glibtoolize) /usr/local/bin/libtoolize	
 endif
 
 PWD		:= $(shell pwd)
@@ -60,7 +61,7 @@ SYSROOT		:= $(TOOLCHAIN)/sysroot
 PKG_CONFIG_LIBDIR	:= $(NDK_PATH)/prebuilt/$(HOST_OS)/lib/pkgconfig
 
 # Toolchain tools
-PATH	:= $(TOOLCHAIN)/bin:/usr/bin:/bin
+PATH	:= $(TOOLCHAIN)/bin:/usr/bin:/bin:/usr/local/bin
 AR	:= llvm-ar
 AS	:= $(CLANG_TARGET)$(API_LEVEL)-clang
 CC	:= $(CLANG_TARGET)$(API_LEVEL)-clang
@@ -345,7 +346,7 @@ download-sources:
 	git clone https://github.com/baresip/rem.git
 	git clone https://github.com/baresip/re.git
 	git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1-stable --single-branch openssl
-	wget https://ftp.osuosl.org/pub/xiph/releases/opus/opus-1.3.1.tar.gz
+	wget https://archive.mozilla.org/pub/opus/opus-1.3.1.tar.gz
 	tar zxf opus-1.3.1.tar.gz
 	rm opus-1.3.1.tar.gz
 	mv opus-1.3.1 opus
